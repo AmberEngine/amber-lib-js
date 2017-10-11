@@ -99,7 +99,7 @@ class Pagination extends PureComponent {
           className={classNames(
             stylesheet.box,
             stylesheet.chevron,
-            (currentPage === 1) && stylesheet.chevronInactive
+            (currentPage === 1) && stylesheet.chevronInactive,
           )}
           onClick={() => this.onSetPage(currentPage - 1)}
           role="button"

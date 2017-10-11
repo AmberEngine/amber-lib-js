@@ -3,7 +3,7 @@ import omit from 'lodash/omit';
 
 export default class Form extends PureComponent {
   static propTypes = {
-    formData: PropTypes.object
+    formData: PropTypes.object,
   }
 
   static childContextTypes = {
@@ -11,7 +11,7 @@ export default class Form extends PureComponent {
     getFormData: PropTypes.func.isRequired,
     registerField: PropTypes.func.isRequired,
     submit: PropTypes.func.isRequired,
-    submitted: PropTypes.bool.isRequired
+    submitted: PropTypes.bool.isRequired,
   }
 
   constructor(props, context) {
@@ -20,7 +20,7 @@ export default class Form extends PureComponent {
     this.state = {
       formData: formData || {},
       fields: [],
-      submitted: false
+      submitted: false,
     };
   }
 
@@ -30,7 +30,7 @@ export default class Form extends PureComponent {
       setFormValue: this.setFormValue,
       registerField: this.registerField,
       submit: this.onSubmit,
-      submitted: this.state.submitted
+      submitted: this.state.submitted,
     };
   }
 
@@ -53,7 +53,7 @@ export default class Form extends PureComponent {
     // Update the state form data.
     this.setState({
       formData,
-      submitted: reset ? false : submitted
+      submitted: reset ? false : submitted,
     });
   }
 
@@ -74,8 +74,8 @@ export default class Form extends PureComponent {
       fields: [...state.fields, field],
       formData: {
         ...state.formData,
-        [field.name]: field.value
-      }
+        [field.name]: field.value,
+      },
     }));
   }
 
@@ -85,8 +85,8 @@ export default class Form extends PureComponent {
         ...state,
         formData: {
           ...state.formData,
-          [field]: value
-        }
+          [field]: value,
+        },
       }), () => {
         // Done updating state!
         resolve();

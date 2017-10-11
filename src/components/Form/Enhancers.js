@@ -8,7 +8,7 @@ import lifecycle from 'recompose/lifecycle';
 import omit from 'lodash/omit';
 
 export const submitEnhancer = getContext({
-  submit: PropTypes.func
+  submit: PropTypes.func,
 });
 
 export const onClickSubmitEnhancer = compose(
@@ -17,9 +17,9 @@ export const onClickSubmitEnhancer = compose(
     const { submit, ...otherProps } = props;
     return {
       onClick: submit,
-      ...otherProps
+      ...otherProps,
     };
-  })
+  }),
 );
 
 const getValueForEvent = (e) => {
@@ -30,7 +30,7 @@ const coreFieldHandlers = compose(
   submitEnhancer,
   getContext({
     getFormData: PropTypes.func,
-    setFormValue: PropTypes.func
+    setFormValue: PropTypes.func,
   }),
   withState('value', 'setValue', ({ name, getFormData }) => {
     const formData = getFormData();
@@ -50,29 +50,29 @@ const coreFieldHandlers = compose(
           submit();
         });
       }
-    }
-  })
+    },
+  }),
 );
 
 const omitCoreFieldProperties = mapProps((props) => omit(props, [
   'getFormData',
   'setFormValue',
   'submit',
-  'setValue'
+  'setValue',
 ]));
 
 const registerField = compose(
   getContext({
-    registerField: PropTypes.func
+    registerField: PropTypes.func,
   }),
   lifecycle({
     componentWillMount() {
       this.props.registerField(this.props);
-    }
+    },
   }),
   mapProps((props) => omit(props, [
-    'registerField'
-  ]))
+    'registerField',
+  ])),
 );
 
 const getValidationErrors = (value, validate, formData, allowMultipleErrors = true) => {
@@ -88,20 +88,20 @@ const getValidationErrors = (value, validate, formData, allowMultipleErrors = tr
 const updateValidation = (value, { getFormData, setValidationErrors, validate = [] }) => {
   const allValues = getFormData();
   setValidationErrors(
-    getValidationErrors(value, validate, allValues)
+    getValidationErrors(value, validate, allValues),
   );
 };
 
 export const enhanceWithFormHandlers = compose(
   coreFieldHandlers,
   registerField,
-  omitCoreFieldProperties
+  omitCoreFieldProperties,
 );
 
 export const enhanceWithValidation = compose(
   coreFieldHandlers,
   getContext({
-    submitted: PropTypes.bool
+    submitted: PropTypes.bool,
   }),
   withState('validationErrors', 'setValidationErrors', ({ value, validate = [] }) => {
     return getValidationErrors(value, validate);
@@ -135,7 +135,7 @@ export const enhanceWithValidation = compose(
     },
     getValidationErrors: ({ validationErrors }) => () => {
       return validationErrors;
-    }
+    },
   }),
   registerField,
   mapProps((props) => omit(props, [
@@ -144,7 +144,7 @@ export const enhanceWithValidation = compose(
     'updateValidation',
     'setVisited',
     'getValueForEvent',
-    'validate'
+    'validate',
   ])),
-  omitCoreFieldProperties
+  omitCoreFieldProperties,
 );

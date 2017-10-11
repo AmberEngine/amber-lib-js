@@ -34,7 +34,7 @@ export const email = regex(emailRegex, 'Please enter a valid email address');
 export const zip = regex(postalCodeRegex, 'Please enter a valid zip code');
 export const passwordHasNumber = regex(
   passwordHasNumberRegex,
-  'Please include at least one number'
+  'Please include at least one number',
 );
 
 
@@ -97,5 +97,5 @@ export const stateOptions = [
   { value: 'WA', label: 'Washington' },
   { value: 'WV', label: 'West Virginia' },
   { value: 'WI', label: 'Wisconsin' },
-  { value: 'WY', label: 'Wyoming' }
+  { value: 'WY', label: 'Wyoming' },
 ];

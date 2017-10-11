@@ -2,7 +2,7 @@ import React from 'react';
 import Modal from 'react-modal';
 import classNames from 'classnames';
 
-import { Icon } from '../../../shared/components';
+import Icon from '../Icon';
 
 import ModalLoading from './ModalLoading';
 

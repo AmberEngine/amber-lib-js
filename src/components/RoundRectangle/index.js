@@ -44,7 +44,7 @@ RoundRectangle.propTypes = {
   onClick: PropTypes.any,
   className: PropTypes.string,
   type: PropTypes.oneOf(['filled', 'inverted', 'cancel', 'filledX', 'coral']),
-  disabled: PropTypes.bool
+  disabled: PropTypes.bool,
 };
 
 export default RoundRectangle;
