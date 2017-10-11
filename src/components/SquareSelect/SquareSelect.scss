@@ -1,0 +1,16 @@
+@import "../../styles/variables";
+
+.squareIcon {
+  display: inline-flex;
+  align-self: center;
+  position: relative;
+  height: 1em;
+  width: 1em;
+  border: 1px solid $dark-gray;
+  cursor: pointer;
+
+  &.selected {
+    border: 1px solid $coral;
+    background-color: $coral
+  }
+}
