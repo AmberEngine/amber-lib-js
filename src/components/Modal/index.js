@@ -8,6 +8,7 @@ import ModalLoading from './ModalLoading';
 
 import stylesheet from './Modal.scss';
 
+
 export default function({
   isOpen,
   onClose,
