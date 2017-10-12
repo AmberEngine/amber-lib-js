@@ -6,6 +6,8 @@ import Button from '../src/components/Button';
 storiesOf('Components', module)
   .add('button renders a button', () => {
     return (
-      <Button>Yo</Button>
+      <Button>
+        Yo
+      </Button>
     );
   });
