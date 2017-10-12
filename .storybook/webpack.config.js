@@ -30,34 +30,34 @@ module.exports = {
       {
         test: /\.(gif|jpg|png|svg|gif|ico|svg)$/,
         include: [
-          path.resolve(__dirname, '../src', 'static', 'img'),
+          /img/,
         ],
         exclude: [
-          path.resolve(__dirname, '../src', 'static', 'icons'),
+          /icons/,
         ],
         loader: 'file-loader?name=[ext]/[name].[ext]',
       },
       {
         test: /\.(otf|ttf|eot|svg|woff)$/,
         include: [
-          path.resolve(__dirname, '../src', 'static', 'fonts'),
+          /fonts/,
         ],
         exclude: [
-          path.resolve(__dirname, '../src', 'static', 'icons'),
+          /icons/,
         ],
         loader: 'file-loader?name=fonts/[name].[ext]',
       },
       {
         test: /\.svg$/,
         include: [
-          path.resolve(__dirname, '../src', 'static', 'icons'),
+          /icons/,
         ],
         loader: 'babel-loader!react-svg-loader?jsx=1',
       },
       {
         test: /\.pdf$/,
         include: [
-          path.resolve(__dirname, '../src', 'static', 'pdf'),
+          /pdf/,
         ],
         loader: 'file-loader?name=[ext]/[name].[ext]',
       },

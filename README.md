@@ -31,3 +31,5 @@ Make sure you have a way to load the following:
 |---|---|
 |`scss` | For loading styles referenced in shared components |
 |`svg` | For loading icons! |
+
+## Adding something new
