@@ -7,13 +7,6 @@ import SortIcon from './SortIcon';
 
 import stylesheet from './Table.scss';
 
-function defaultSort(data, column, sortAscending = true) {
-  const sortedData = data.sort((original, newRecord) => {
-    return sort(original.get(column), newRecord.get(column));
-  });
-  return sortAscending ? sortedData : sortedData.reverse();
-}
-
 const DefaultTableHeadingCellContent = ({ title, icon, cellProperties }) => {
   const displayIcon = cellProperties.sortable === false
     ? null
@@ -34,6 +27,6 @@ const DefaultTableHeadingCellContent = ({ title, icon, cellProperties }) => {
 export default class TableColumnDefinition extends ColumnDefinition {
   static defaultProps = {
     customHeadingComponent: DefaultTableHeadingCellContent,
-    sortMethod: defaultSort,
+    sortMethod: sort,
   }
 }
