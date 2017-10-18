@@ -1,14 +1,24 @@
-import React, { Component, PropTypes } from 'react';
+import React, { PureComponent, PropTypes } from 'react';
 import classNames from 'classnames';
 
 import getContext from 'recompose/getContext';
+import mapProps from 'recompose/mapProps';
+import onlyUpdateForKeys from 'recompose/onlyUpdateForKeys';
+import compose from 'recompose/compose';
 
 import stylesheet from './AccordionItem.scss';
 
-export default getContext({
-  visibleAccordionKey: PropTypes.object,
-  toggleAccordionItem: PropTypes.func,
-})(class AccordionItem extends Component {
+export default compose(
+  getContext({
+    visibleAccordionKey: PropTypes.string,
+    toggleAccordionItem: PropTypes.func,
+  }),
+  mapProps(props => ({
+    ...props,
+    visible: props.label === props.visibleAccordionKey,
+  })),
+  onlyUpdateForKeys(['visible']),
+)(class AccordionItem extends PureComponent {
   constructor(props, context) {
     super(props, context);
     this.state = {
@@ -17,24 +27,17 @@ export default getContext({
   }
 
   componentWillReceiveProps(nextProps) {
+    const { visible } = nextProps;
     const { beenVisible } = this.state;
 
-    const visible = this.isVisible(nextProps);
     if (!beenVisible && visible) {
       this.setState({ beenVisible: true });
     }
   }
 
-  isVisible(props) {
-    const { label, visibleAccordionKey } = props;
-    return label === visibleAccordionKey;
-  }
-
   getBodyContent() {
-    const { children } = this.props;
+    const { visible, children } = this.props;
     const { beenVisible } = this.state;
-
-    const visible = this.isVisible(this.props);
 
     const wrapperClass = classNames({
       [stylesheet.beenVisible]: beenVisible && !visible,
@@ -42,7 +45,7 @@ export default getContext({
 
     return (
       <div className={wrapperClass}>
-        {visible && beenVisible && children}
+        {(visible || beenVisible) && children}
       </div>
     );
   }

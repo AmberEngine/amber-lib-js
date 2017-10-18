@@ -5,17 +5,39 @@ import { AccordionContainer, AccordionItem } from '../../src/components/Accordio
 
 
 storiesOf('Accordion', module)
-  .add('renders dropdown', () => {
+  .add('renders accordion', () => {
+    class Blah extends React.Component {
+      state = {
+        time: 0,
+      }
+
+      componentDidMount() {
+        setInterval(() => {
+          this.setState(state => ({
+            time: state.time + 1,
+          }));
+        }, 1000);
+      }
+
+      render() {
+        const { label } = this.props;
+        const { time } = this.state;
+        return (
+          <span>{label} + {time}</span>
+        );
+      }
+    }
+
     return (
       <AccordionContainer>
         <AccordionItem label="First Item">
-          First Content!
+          <Blah label="First Content!" />
         </AccordionItem>
         <AccordionItem label="Second Item">
-          Second Content!
+          <Blah label="Second Content!" />
         </AccordionItem>
         <AccordionItem label="Third Item">
-          Third Content!
+          <Blah label="Third Content!" />
         </AccordionItem>
       </AccordionContainer>
     );
