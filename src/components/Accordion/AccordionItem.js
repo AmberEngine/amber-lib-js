@@ -35,12 +35,11 @@ export default compose(
     }
   }
 
-  getBodyContent() {
-    const { visible, children } = this.props;
+  getBodyContent(visible, children) {
     const { beenVisible } = this.state;
 
-    const wrapperClass = classNames({
-      [stylesheet.beenVisible]: beenVisible && !visible,
+    const wrapperClass = classNames(stylesheet.accordionBody, {
+      [stylesheet.hide]: !visible,
     });
 
     return (
@@ -56,13 +55,20 @@ export default compose(
   }
 
   render() {
-    const { label } = this.props;
+    const { label, className, visible, children, ...restProps } = this.props;
+    const itemClass = classNames(stylesheet.accordionItem, className);
+
     return (
-      <li>
-        <span onClick={this.toggleAccordionItem} role="button" tabIndex="0">
-          {label}
+      <li className={itemClass} {...restProps}>
+        <span
+          className={stylesheet.accordionTitle}
+          onClick={this.toggleAccordionItem}
+          role="button"
+          tabIndex="0"
+        >
+          <h3>{label}</h3>
         </span>
-        {this.getBodyContent()}
+        {this.getBodyContent(visible, children)}
       </li>
     );
   }

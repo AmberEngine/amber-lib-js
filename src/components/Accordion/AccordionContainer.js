@@ -1,4 +1,7 @@
 import React, { Component, PropTypes } from 'react';
+import classNames from 'classnames';
+
+import stylesheet from './AccordionContainer.scss';
 
 export default class AccordionContainer extends Component {
   static childContextTypes = {
@@ -19,16 +22,18 @@ export default class AccordionContainer extends Component {
   }
 
   toggleAccordionItem = (accordionKey) => {
-    this.setState({
-      visibleAccordionKey: accordionKey,
-    });
+    this.setState(state => ({
+      visibleAccordionKey: state.visibleAccordionKey !== accordionKey ? accordionKey : null,
+    }));
   }
 
   render() {
+    const { children, className, ...restProps } = this.props;
+    const containerClass = classNames(stylesheet.accordionContainer, className);
     return (
-      <div>
-        {this.props.children}
-      </div>
+      <ul className={containerClass} {...restProps}>
+        {children}
+      </ul>
     );
   }
 }

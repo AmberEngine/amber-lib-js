@@ -1,6 +1,8 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 
+import './stories.scss';
+
 import { AccordionContainer, AccordionItem } from '../../src/components/Accordion';
 
 
@@ -29,16 +31,18 @@ storiesOf('Accordion', module)
     }
 
     return (
-      <AccordionContainer>
-        <AccordionItem label="First Item">
-          <Blah label="First Content!" />
-        </AccordionItem>
-        <AccordionItem label="Second Item">
-          <Blah label="Second Content!" />
-        </AccordionItem>
-        <AccordionItem label="Third Item">
-          <Blah label="Third Content!" />
-        </AccordionItem>
-      </AccordionContainer>
+      <div style={{ background: '#efefef' }}>
+        <AccordionContainer>
+          <AccordionItem label="First Item">
+            <Blah label="First Content!" />
+          </AccordionItem>
+          <AccordionItem label="Second Item">
+            <Blah label="Second Content!" />
+          </AccordionItem>
+          <AccordionItem label="Third Item">
+            <Blah label="Third Content!" />
+          </AccordionItem>
+        </AccordionContainer>
+      </div>
     );
   });
