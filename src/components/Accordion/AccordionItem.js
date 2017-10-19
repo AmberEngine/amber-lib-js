@@ -39,7 +39,7 @@ export default compose(
     const { beenVisible } = this.state;
 
     const accordionBodyClass = classNames(stylesheet.accordionBody, {
-      [stylesheet.hide]: !visible,
+      [stylesheet.hide]: !visible || !children,
     });
 
     return (

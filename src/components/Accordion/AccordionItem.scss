@@ -27,6 +27,7 @@
   flex: 1;
   max-height: 999px;
   transition: max-height 0.5s;
+  overflow-y: scroll;
 }
 
 .hide {

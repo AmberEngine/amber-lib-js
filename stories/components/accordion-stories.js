@@ -25,7 +25,7 @@ storiesOf('Accordion', module)
         const { label } = this.props;
         const { time } = this.state;
         return (
-          <div style={{ height: '300px' }}>{label} + {time}</div>
+          <div style={{ height: '1300px' }}>{label} + {time}</div>
         );
       }
     }
@@ -42,6 +42,7 @@ storiesOf('Accordion', module)
           <AccordionItem label="Third Item">
             <Blah label="Third Content!" />
           </AccordionItem>
+          <AccordionItem label="Empty Child!" onClick={() => alert('clicked!')} />
         </AccordionContainer>
       </div>
     );
