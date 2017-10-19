@@ -25,7 +25,7 @@ storiesOf('Accordion', module)
         const { label } = this.props;
         const { time } = this.state;
         return (
-          <span>{label} + {time}</span>
+          <div style={{ height: '300px' }}>{label} + {time}</div>
         );
       }
     }

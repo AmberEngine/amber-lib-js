@@ -25,9 +25,15 @@
 
 .accordionBody {
   flex: 1;
-  padding: 1rem;
+  max-height: 999px;
+  transition: max-height 0.5s;
 }
 
 .hide {
-  display: none;
+  max-height: 0px;
+  overflow: hidden;
+}
+
+.bodyWrapper {
+  padding: 1rem;
 }

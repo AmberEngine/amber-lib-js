@@ -38,13 +38,15 @@ export default compose(
   getBodyContent(visible, children) {
     const { beenVisible } = this.state;
 
-    const wrapperClass = classNames(stylesheet.accordionBody, {
+    const accordionBodyClass = classNames(stylesheet.accordionBody, {
       [stylesheet.hide]: !visible,
     });
 
     return (
-      <div className={wrapperClass}>
-        {(visible || beenVisible) && children}
+      <div className={accordionBodyClass}>
+        <div className={stylesheet.bodyWrapper}>
+          {(visible || beenVisible) && children}
+        </div>
       </div>
     );
   }
