@@ -1,3 +1,4 @@
+export * as Accordion from './Accordion';
 export Button from './Button';
 export Dropdown from './Dropdown';
 export * as Form from './Form';
