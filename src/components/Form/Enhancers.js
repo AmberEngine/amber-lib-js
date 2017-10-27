@@ -4,6 +4,7 @@ import withHandlers from 'recompose/withHandlers';
 import withState from 'recompose/withState';
 import mapProps from 'recompose/mapProps';
 import compose from 'recompose/compose';
+import onlyUpdateForKeys from 'recompose/onlyUpdateForKeys';
 import lifecycle from 'recompose/lifecycle';
 import omit from 'lodash/omit';
 
@@ -36,12 +37,15 @@ const coreFieldHandlers = compose(
     const formData = getFormData();
     return formData[name] || '';
   }),
+  onlyUpdateForKeys(['value']),
   withHandlers({
     onBlur: ({ name, value, setFormValue }) => () => {
       setFormValue(name, value);
     },
-    onChange: ({ setValue }) => (e) => {
-      setValue(getValueForEvent(e));
+    onChange: ({ name, setValue, setFormValue }) => (e) => {
+      const value = getValueForEvent(e);
+      setValue(value);
+      setFormValue(name, value);
     },
     onKeyPress: ({ submit, setFormValue, name, value }) => (e) => {
       if (e.key === 'Enter') {
