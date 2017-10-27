@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import omit from 'lodash/omit';
 
-import { enhanceWithFormHandlers } from './Form/Enhancers';
-import { RoundRectangle } from './RoundRectangle'
+import { enhanceWithFormHandlers } from '../Form/Enhancers';
 
+import RoundRectangle from '../RoundRectangle'
 import FormBoxLabel from './FormBoxLabel';
 
 import stylesheet from './FormBox.scss';
