@@ -42,9 +42,13 @@ export default function({
       contentLabel={label}
       className={{
         base: stylesheet.modalContainer,
+        afterOpen: stylesheet.modalContainer,
+        beforeClose: stylesheet.modalContainer
       }}
       overlayClassName={{
         base: stylesheet.overlayContainer,
+        afterOpen: stylesheet.overlayContainer,
+        beforeClose: stylesheet.overlayContainer
       }}
     >
       {labelContent}
