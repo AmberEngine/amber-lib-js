@@ -1,0 +1,63 @@
+@import "~amber-lib-js/build/styles/variables";
+
+.exportContainer {
+  text-align: center;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.box {
+  width: 32%;
+  border: 1px solid $gray;
+  box-sizing: border-box;
+  padding: 2rem;
+  margin-right: 2%;
+  position: relative;
+
+  .mainAction {
+    font-weight: bold;
+  }
+
+  span {
+    color: $tangerine;
+    cursor: pointer;
+  }
+}
+
+.productJSON {
+  margin-right: 0;
+}
+
+.formWrapper {
+  input.isHidden {
+    display: none;
+  }
+}
+
+.filename {
+  cursor: default;
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  background: white;
+  border: 1px solid $blackberry;
+  color: $blackberry;
+  font-size: 0.6rem;
+  padding: 0.1rem 0.8rem 0.1rem 0;
+  border-radius: 0.3rem;
+
+  &:hover, span, span:hover {
+    background: white;
+    color: $blackberry;
+  }
+}
+
+.x {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0.6rem;
+}

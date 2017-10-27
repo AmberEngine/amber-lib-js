@@ -2,6 +2,7 @@ export * as Accordion from './Accordion';
 export Button from './Button';
 export Dropdown from './Dropdown';
 export * as Form from './Form';
+export FormBox from './FormBox';
 export FormFields from './FormFields';
 export Icon from './Icon';
 export IconButton from './IconButton';
