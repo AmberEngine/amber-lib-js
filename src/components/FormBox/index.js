@@ -8,7 +8,7 @@ import FormBoxLabel from './FormBoxLabel';
 
 import stylesheet from './FormBox.scss';
 
-class FormBoxField extends Component {
+class FormBox extends Component {
   onClickValue = (e) => {
     const { template, clearTemplateValue, onChange, onBlur } = this.props;
     if (template) {
@@ -70,4 +70,4 @@ class FormBoxField extends Component {
   }
 }
 
-export const FormBox = enhanceWithFormHandlers(FormBoxField);
+export const FormBoxField = enhanceWithFormHandlers(FormBoxField);
