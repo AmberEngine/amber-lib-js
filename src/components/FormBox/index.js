@@ -16,11 +16,6 @@ class FormBox extends Component {
     } else {
       // Clear the actual value.
       onChange(null);
-
-      // HACK! Will be fixed with password manager autofill updates.
-      setTimeout(() => {
-        onBlur();
-      }, 10);
     }
   }
 

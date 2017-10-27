@@ -16,11 +16,6 @@ export const EnhanceWithFileInput = (OriginalComponent) =>
       const { onChange, onBlur } = this.props;
 
       onChange(e.target.files[0]);
-
-      // HACK! Will be fixed with password manager autofill updates.
-      setTimeout(() => {
-        onBlur();
-      }, 10);
     };
 
     render() {
