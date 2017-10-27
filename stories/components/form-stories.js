@@ -2,6 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 
 import { Form, FormGroup, Fields, Submit, Validation } from '../../src/components/Form';
+import { FormBoxField } from '../../src/components/FormBox'
 const { required, equalTo } = Validation;
 
 const onFormSubmit = data => console.log('submitted!', data);
@@ -27,6 +28,21 @@ storiesOf('Form', module)
           name="template"
           className="form-control"
           FieldComponent={Fields.ValidatedInputField}
+        />
+        <Submit
+          type="submit"
+        >
+          EXPORT
+        </Submit>
+      </Form>
+    );
+  })
+  .add('renders formboxfield', () => {
+    return (
+      <Form onSubmit={onFormSubmit}>
+        <FormBoxField
+          name="template"
+          label="label"
         />
         <Submit
           type="submit"
