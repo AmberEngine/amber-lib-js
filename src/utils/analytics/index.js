@@ -16,8 +16,7 @@ export default class AnalyticsProvider {
   }
 
   initialize() {
-    this.analyticSources
-      .filter(source => source.enabled)
+    this.getAnalyticSources()
       .forEach(source => {
         source.initialize();
       });
