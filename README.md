@@ -32,4 +32,30 @@ Make sure you have a way to load the following:
 |`scss` | For loading styles referenced in shared components |
 |`svg` | For loading icons! |
 
-## Adding something new
+Rather than including a specific path to resolve content included in `amber-lib-js`, you'll need to include these files via a regex in the Webpack loader.
+
+### Example (for SVG):
+```
+{
+  test: [/\.bmp$/, /\.gif$/, /\.jpe?g$/, /\.png$/, /\.svg/],
+  loader: require.resolve('url-loader'),
+  exclude: [
+    /icons/,
+  ],
+},
+{
+  test: /\.svg$/,
+  include: [
+    /icons/,
+  ],
+  use: [
+    { loader: 'babel-loader' },
+    {
+      loader: 'react-svg-loader',
+      options: { jsx: true },
+    },
+  ],
+},
+```
+
+To see how things are being used in a real project, check out the Apollo project!
