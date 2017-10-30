@@ -13,6 +13,8 @@
     "classnames": "^2.2.5",
     "griddle-react": "^1.9.0",
     "moment": "^2.19.1",
+    "raven-js": "^3.19.1",
+    "react-ga": "^2.3.5",
     "react-input-mask": "^1.0.7",
     "react-modal": "^3.0.0",
     "react-select": "^1.0.0-rc.10",
