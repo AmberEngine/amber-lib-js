@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import Form, FormGroup, Fields, Submit from '../Form';
+import { Form, FormGroup, Fields, Submit } from '../Form';
 import { required } from '../Form/Validation';
 
 import stylesheet from './SelectModal.scss';
