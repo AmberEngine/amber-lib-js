@@ -5,7 +5,7 @@ import { required } from '../Form/Validation';
 
 import stylesheet from './SelectModal.scss';
 
-export default class SelectModal extends Component {
+class SelectModal extends Component {
   render() {
     const {
       onSubmit,
@@ -47,3 +47,5 @@ export default class SelectModal extends Component {
     );
   }
 }
+
+export default SelectModal;
