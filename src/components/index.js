@@ -9,6 +9,7 @@ export IconButton from './IconButton';
 export Modal from './Modal';
 export Pagination from './Pagination';
 export RoundRectangle from './RoundRectangle';
+export SelectModal from './SelectModal';
 export SquareSelect from './SquareSelect';
 export * as Table from './Table';
 
