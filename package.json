@@ -2,6 +2,8 @@
   "name": "amber-lib-js",
   "version": "1.0.0",
   "private": true,
+  "author": "Amber Engine",
+  "license": "MIT",
   "peerDependencies": {
     "react": ">=15"
   },
@@ -64,7 +66,6 @@
     "type": "git",
     "url": "git+https://github.com/AmberEngine/amber-lib-js.git"
   },
-  "author": "Amber Engine",
   "bugs": {
     "url": "https://github.com/AmberEngine/amber-lib-js/issues"
   },
