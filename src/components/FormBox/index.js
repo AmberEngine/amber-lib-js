@@ -55,7 +55,7 @@ class FormBox extends Component {
       template,
       toggleTemplateSelectModal,
       clearTemplateValue,
-      className
+      className,
       ...changeHandlerProps
     } = this.props;
 
