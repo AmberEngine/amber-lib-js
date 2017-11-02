@@ -26,6 +26,7 @@
     "@storybook/addon-actions": "^3.2.12",
     "@storybook/addon-links": "^3.2.12",
     "@storybook/react": "^3.2.12",
+    "@storybook/storybook-deployer": "^2.0.0",
     "autoprefixer": "7.1.2",
     "ava": "^0.22.0",
     "babel-eslint": "7.2.3",
@@ -59,6 +60,7 @@
     "start": "start-storybook -p 6006",
     "clean": "rimraf build",
     "build": "babel src --out-dir build --copy-files --source-maps",
+    "deploy-storybook": "storybook-to-ghpages",
     "test": "ava",
     "postinstall": "npm run build"
   },
