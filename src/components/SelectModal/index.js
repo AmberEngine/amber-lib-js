@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import classNames from 'classnames';
 
 import { Form, FormGroup, Fields, Submit } from '../Form';
 import Modal from '../Modal';
@@ -15,15 +16,18 @@ class SelectModal extends Component {
       visible,
       label,
       title,
-      name
+      name,
+      className
     } = this.props;
+
+    const modalClass = classNames(stylesheet.modalContainer, className);
 
     return (
       <Modal
         isOpen={visible}
         onClose={toggleModal}
         label={label}
-        className={stylesheet.modalContainer}
+        className={modalClass}
       >
         <Form
           onSubmit={onSubmit}
