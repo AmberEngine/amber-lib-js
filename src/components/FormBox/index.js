@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import omit from 'lodash/omit';
+import classNames from 'classnames';
 
 import { enhanceWithFormHandlers } from '../Form/Enhancers';
 
@@ -57,8 +58,10 @@ class FormBox extends Component {
       ...changeHandlerProps
     } = this.props;
 
+    const boxClass = classNames(stylesheet.box, classNames);
+
     return (
-      <div className={stylesheet.box}>
+      <div className={boxClass}>
         {this.getCurrentFileContent(value, template)}
         <FormBoxLabel
           value={value}
