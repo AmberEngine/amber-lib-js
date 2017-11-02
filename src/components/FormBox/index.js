@@ -55,10 +55,11 @@ class FormBox extends Component {
       template,
       toggleTemplateSelectModal,
       clearTemplateValue,
+      className
       ...changeHandlerProps
     } = this.props;
 
-    const boxClass = classNames(stylesheet.box, classNames);
+    const boxClass = classNames(stylesheet.box, className);
 
     return (
       <div className={boxClass}>
