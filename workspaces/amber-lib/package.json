@@ -1,7 +1,7 @@
 {
-  "name": "{{name}}",
+  "name": "amber-lib",
   "version": "1.0.0",
-  "description": "{{description}}",
+  "description": "",
   "author": "Amber Engine",
   "license": "MIT",
   "main": "lib/index.js",
@@ -20,7 +20,9 @@
   "peerDependencies": {
     "react": "15.x"
   },
-  "dependencies": {},
+  "dependencies": {
+    "amber-utils": "1.0.0"
+  },
   "devDependencies": {
     "nwb": "^0.19.1",
     "ava": "^0.22.0"
