@@ -1,0 +1,14 @@
+{
+  "name": "amber-generator",
+  "version": "1.0.0",
+  "description": "Generate your libs!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Amber Engine",
+  "license": "MIT",
+  "dependencies": {
+    "plop": "^1.9.0"
+  }
+}
