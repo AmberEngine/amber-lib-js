@@ -1,0 +1,28 @@
+{
+  "name": "{{name}}",
+  "version": "1.0.0",
+  "private": true,
+  "author": "Amber Engine",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": ">=15"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@storybook/addon-actions": "^3.2.12",
+    "@storybook/addon-links": "^3.2.12",
+    "@storybook/react": "^3.2.12",
+    "nwb": "^19.0.1"
+  },
+  "description": "{{description}}",
+  "main": "lib/index.js",
+  "scripts": {
+    "storybook": "start-storybook -p 6006",
+    "clean": "nwb clean-module",
+    "build": "nwb build-react-component --copy-files",
+    "test": "ava"
+  },
+  "repository": "",
+  "bugs": "",
+  "homepage": ""
+}
