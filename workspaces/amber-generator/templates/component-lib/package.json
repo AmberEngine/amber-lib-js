@@ -13,6 +13,7 @@
     "umd"
   ],
   "scripts": {
+    "storybook": "start-storybook -p 6006",
     "clean": "nwb clean-module",
     "build": "nwb build-react-component --copy-files",
     "test": "ava"
@@ -22,6 +23,9 @@
   },
   "dependencies": {},
   "devDependencies": {
+    "@storybook/addon-actions": "^3.2.12",
+    "@storybook/addon-links": "^3.2.12",
+    "@storybook/react": "^3.2.12",
     "nwb": "^0.19.1",
     "ava": "^0.22.0"
   },

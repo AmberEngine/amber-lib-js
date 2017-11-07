@@ -57,7 +57,7 @@
   "description": "A wonderful place for all of our shareable components!",
   "main": "build/index.js",
   "scripts": {
-    "create-library": "cd workspaces/amber-generator/ && yarn plop",
+    "new": "cd workspaces/amber-generator/ && yarn plop",
     "start": "start-storybook -p 6006",
     "clean": "rimraf build",
     "build": "babel src --out-dir build --copy-files --source-maps",
