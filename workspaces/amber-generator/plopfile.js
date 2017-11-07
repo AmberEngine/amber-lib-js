@@ -8,8 +8,13 @@ module.exports = (plop) => {
     }],
     actions: [{
       type: 'addMany',
-      base: 'templates/library',
+      templateFiles: 'templates/library/**',
       destination: '../{{name}}/',
+      base: 'templates/library'
+    }, {
+      type: 'add',
+      templateFile: 'templates/library/.gitignore',
+      path: '../{{name}}/.gitignore'
     }],
   });
 };
