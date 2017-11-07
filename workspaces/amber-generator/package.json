@@ -4,6 +4,7 @@
   "description": "Generate your libs!",
   "main": "index.js",
   "scripts": {
+    "plop": "plop library",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Amber Engine",
