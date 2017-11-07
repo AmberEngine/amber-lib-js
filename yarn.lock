@@ -6404,7 +6404,7 @@ number-is-nan@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/number-is-nan/-/number-is-nan-1.0.1.tgz#097b602b53422a522c1afb8790318336941a011d"
 
-nwb@^19.0.1:
+nwb@^0.19.1:
   version "0.19.1"
   resolved "https://registry.yarnpkg.com/nwb/-/nwb-0.19.1.tgz#1ca5c9abbd5b7ba83e9936a922f3d02449b2b353"
   dependencies:

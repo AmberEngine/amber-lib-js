@@ -1,18 +1,29 @@
 {
-  "name": "amber-utils",
+  "name": "amber-utils2",
   "version": "1.0.0",
-  "private": true,
+  "description": "",
   "author": "Amber Engine",
   "license": "MIT",
-  "dependencies": {},
-  "devDependencies": {
-    "nwb": "^0.19.1"
-  },
-  "description": "",
   "main": "lib/index.js",
+  "module": "es/index.js",
+  "files": [
+    "css",
+    "es",
+    "lib",
+    "umd"
+  ],
   "scripts": {
     "clean": "nwb clean-module",
-    "build": "nwb build-react-component --copy-files"
+    "build": "nwb build-react-component --copy-files",
+    "test": "ava"
+  },
+  "peerDependencies": {
+    "react": "15.x"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "nwb": "^0.19.1",
+    "ava": "^0.22.0"
   },
   "repository": {
     "type": "git",
@@ -21,5 +32,28 @@
   "bugs": {
     "url": "https://github.com/AmberEngine/amber-lib-js/issues"
   },
-  "homepage": "https://github.com/AmberEngine/amber-lib-js#readme"
+  "homepage": "https://github.com/AmberEngine/amber-lib-js#readme",
+  "ava": {
+    "files": [
+      "src/**/*.test.js"
+    ],
+    "source": [
+      "src/**/*.{js,jsx}",
+      "!node_modules/**/*"
+    ],
+    "concurrency": 5,
+    "failFast": true,
+    "failWithoutAssertions": false,
+    "tap": false,
+    "verbose": true,
+    "powerAssert": false,
+    "require": [
+      "babel-register",
+      "ignore-styles",
+      "../../config/testHelpers.js"
+    ],
+    "babel": {
+      "presets": ["env", "react", "stage-0"]
+    }
+  }
 }
