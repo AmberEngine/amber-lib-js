@@ -1,5 +1,5 @@
 {
-  "name": "amber-lib",
+  "name": "unformed",
   "version": "1.0.0",
   "description": "",
   "author": "Amber Engine",
@@ -13,6 +13,7 @@
     "umd"
   ],
   "scripts": {
+    "storybook": "start-storybook -p 6006",
     "clean": "nwb clean-module",
     "build": "nwb build-react-component --copy-files",
     "test": "ava"
@@ -21,10 +22,20 @@
     "react": "15.x"
   },
   "dependencies": {
+    "amber-content": "1.0.0",
+    "classnames": "^2.2.5",
+    "lodash.omit": "^4.5.0",
+    "react-input-mask": "^1.0.7",
+    "react-select": "^1.0.0-rc.10",
+    "recompose": "^0.26.0"
   },
   "devDependencies": {
+    "@storybook/addon-actions": "^3.2.12",
+    "@storybook/addon-links": "^3.2.12",
+    "@storybook/react": "^3.2.12",
+    "ava": "^0.22.0",
     "nwb": "^0.19.1",
-    "ava": "^0.22.0"
+    "nwb-sass": "^0.8.2"
   },
   "repository": {
     "type": "git",
@@ -54,7 +65,11 @@
       "../../config/testHelpers.js"
     ],
     "babel": {
-      "presets": ["env", "react", "stage-0"]
+      "presets": [
+        "env",
+        "react",
+        "stage-0"
+      ]
     }
   }
 }
