@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 
 import Modal from '../Modal';
-import { Form, FormGroup, Fields, Submit } from '../Form';
-import { required } from '../Form/Validation';
+import { Form, FormGroup, Fields, Validation } from 'unformed';
+import FormSubmit from '../FormSubmit';
+const { required } = Validation;
 
 import stylesheet from './SelectModal.scss';
 
@@ -15,7 +16,7 @@ class SelectModal extends Component {
       visible,
       label,
       title,
-      name
+      name,
     } = this.props;
 
     return (
@@ -37,12 +38,12 @@ class SelectModal extends Component {
             FieldComponent={Fields.ValidatedDropDownField}
             options={options}
           />
-          <Submit
+          <FormSubmit
             type="submit"
             className={stylesheet.submitButton}
           >
             SUBMIT
-          </Submit>
+          </FormSubmit>
         </Form>
       </Modal>
     );

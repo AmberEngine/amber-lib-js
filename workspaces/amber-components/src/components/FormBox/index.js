@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
-import { enhanceWithFormHandlers } from '../Form/Enhancers';
+import { Enhancers } from 'unformed';
 
-import RoundRectangle from '../RoundRectangle'
+import RoundRectangle from '../RoundRectangle';
 import FormBoxLabel from './FormBoxLabel';
 
 import stylesheet from './FormBox.scss';
@@ -69,4 +69,4 @@ class FormBox extends Component {
   }
 }
 
-export const FormBoxField = enhanceWithFormHandlers(FormBox);
+export const FormBoxField = Enhancers.enhanceWithFormHandlers(FormBox);

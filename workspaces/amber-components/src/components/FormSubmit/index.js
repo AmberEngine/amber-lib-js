@@ -1,10 +1,10 @@
 import React from 'react';
 
-import { onClickSubmitEnhancer } from './Enhancers';
+import { Enhancers } from 'unformed';
 
 import Button from '../Button';
 
-export default onClickSubmitEnhancer((props) => {
+export default Enhancers.onClickSubmitEnhancer((props) => {
   const { children, ...restProps } = props;
   return (
     <Button {...restProps}>
