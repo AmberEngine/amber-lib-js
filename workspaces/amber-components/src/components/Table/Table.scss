@@ -1,0 +1,52 @@
+@import "amber-content/lib/styles/variables";
+
+.layoutContainer {
+  background-color: white;
+
+  a {
+    cursor: pointer;
+    color: $blackberry;
+    &:hover {
+      color: $coral;
+    }
+  }
+}
+
+.tableContent {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.separatedRow {
+  border-bottom: 1px solid $gray;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.cell {
+  height: 60px;
+
+  &:first-child {
+    padding-left: 2px;
+  }
+
+  &:last-child {
+    padding-right: 15px;
+  }
+}
+
+.selectedHeader {
+  color: $blackberry;
+}
+
+.hoverPreview {
+  :global(.sortPreview) {
+    opacity: 0;
+  }
+
+  &:hover :global(.sortPreview) {
+    opacity: 0.5;
+  }
+}
