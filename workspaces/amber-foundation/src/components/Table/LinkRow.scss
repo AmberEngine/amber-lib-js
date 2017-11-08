@@ -1,0 +1,9 @@
+@import "../../styles/variables";
+
+.link {
+  color: $blackberry;
+  cursor: pointer;
+  &:hover {
+    color: $blackberry;
+  }
+}

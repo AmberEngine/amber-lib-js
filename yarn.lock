@@ -7662,9 +7662,9 @@ react-modal@^2.4.1:
     exenv "^1.2.0"
     prop-types "^15.5.10"
 
-react-modal@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/react-modal/-/react-modal-3.0.0.tgz#2d8c4e0355b610f3df3fac0d60541a81bfc04324"
+react-modal@^3.0.0, react-modal@^3.1.2:
+  version "3.1.2"
+  resolved "https://registry.yarnpkg.com/react-modal/-/react-modal-3.1.2.tgz#6e1fd656315d6fc62a1edda2b5aecc9752ac6bca"
   dependencies:
     exenv "^1.2.0"
     prop-types "^15.5.10"
