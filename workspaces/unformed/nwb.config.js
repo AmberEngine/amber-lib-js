@@ -2,6 +2,14 @@ module.exports = {
   type: 'react-component',
   npm: {
     esModules: true,
-    umd: true
+    umd: false
+  },
+  webpack: {
+    rules: {
+      'sass-css': {
+        modules: true,
+        localIdentName:  '[hash:base64:5]'
+      },
+    }
   }
 }
