@@ -1,4 +1,3 @@
-export components from './components';
+import components from './components';
 
-import * as self from './index';
-export default self;
+export default components;

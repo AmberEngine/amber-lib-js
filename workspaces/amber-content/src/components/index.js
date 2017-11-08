@@ -1,4 +1,3 @@
-export Icon from './Icon';
+import Icon from './Icon';
 
-import * as self from './index';
-export default self;
+export default Icon;

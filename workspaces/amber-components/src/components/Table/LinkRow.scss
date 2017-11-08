@@ -1,0 +1,9 @@
+@import "amber-content/lib/styles/variables";
+
+.link {
+  color: $blackberry;
+  cursor: pointer;
+  &:hover {
+    color: $blackberry;
+  }
+}
