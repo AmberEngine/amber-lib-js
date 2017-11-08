@@ -1,0 +1,8 @@
+@import "amber-content/lib/styles/variables";
+
+.errorContainer {
+  background-color: white;
+  padding: 1rem;
+  color: $tangerine;
+  border-bottom: 2px solid $light-gray;
+}
