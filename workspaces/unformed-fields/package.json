@@ -1,5 +1,5 @@
 {
-  "name": "unformed",
+  "name": "unformed-fields",
   "version": "1.0.0",
   "description": "",
   "author": "Amber Engine",
@@ -19,12 +19,12 @@
     "test": "ava"
   },
   "peerDependencies": {
-    "react": "15.x"
+    "react": "15.x",
+    "unformed": "^1.0.0"
   },
   "dependencies": {
-    "classnames": "^2.2.5",
-    "lodash.omit": "^4.5.0",
-    "recompose": "^0.26.0"
+    "react-input-mask": "^1.0.7",
+    "react-select": "^1.0.0-rc.10"
   },
   "devDependencies": {
     "@storybook/addon-actions": "^3.2.12",
@@ -32,7 +32,7 @@
     "@storybook/react": "^3.2.12",
     "ava": "^0.22.0",
     "nwb": "^0.19.1",
-    "nwb-sass": "^0.8.2"
+    "unformed": "^1.0.0"
   },
   "repository": {
     "type": "git",
