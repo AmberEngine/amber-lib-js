@@ -1,26 +1,11 @@
 /* eslint-disable new-cap */
 import React from 'react';
 import { enhanceWithFormHandlers, enhanceWithValidation } from './Enhancers';
-import InputMask from 'react-input-mask';
-import Select from 'react-select';
 
 import stylesheet from './Fields.scss';
 
 const Input = (props) => {
   return (<input type="text" {...props} />);
-};
-
-const MaskInput = (props) => {
-  return <InputMask {...props} maskChar=" " />;
-};
-
-export const Dropdown = (props) => {
-  return (
-    <Select
-      {...props}
-      clearable={false}
-    />
-  );
 };
 
 const ValidationErrors = ({ validationErrors }) => {
@@ -52,5 +37,3 @@ export const ValidatedField = OriginalComponent => (props) => {
 
 export const InputField = enhanceWithFormHandlers(Input);
 export const ValidatedInputField = enhanceWithValidation(ValidatedField(Input));
-export const ValidatedMaskField = enhanceWithValidation(ValidatedField(MaskInput));
-export const ValidatedDropDownField = enhanceWithValidation(ValidatedField(Dropdown));
