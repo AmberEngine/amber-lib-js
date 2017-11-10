@@ -1,4 +1,13 @@
-import 'amber-content';
+import { components, utils } from 'amber-components';
+import Form from 'unformed';
 
-import * as self from './index';
-export default self;
+import { components as ContentComponents } from 'amber-content';
+
+export default {
+  components: {
+    ...components,
+    ...ContentComponents,
+    Form,
+  },
+  utils,
+};
