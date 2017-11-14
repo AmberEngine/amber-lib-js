@@ -1,7 +1,7 @@
 import React from 'react';
 import Select from 'react-select';
 
-import { Icon } from 'amber-content';
+import { Icon } from '@amber-engine/amber-content';
 
 import './Dropdown.scss';
 

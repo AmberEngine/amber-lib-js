@@ -1,7 +1,7 @@
-import { components, utils } from 'amber-components';
+import { components, utils } from '@amber-engine/amber-components';
 import Form from 'unformed';
 
-import { components as ContentComponents } from 'amber-content';
+import { components as ContentComponents } from '@amber-engine/amber-content';
 
 export default {
   components: {
