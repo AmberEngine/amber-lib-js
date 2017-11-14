@@ -1,22 +1,17 @@
-# Amber Lib (js)
+# Amber Components (js)
 A wonderful place for all of our shareable components! :information_desk_person:
-* **Shared components**: No more copy-pasting. Share your components with the world (of Amber Engine)!
-* **Storybooks**: Easily see what's available for your project by checking out the `storybook`. Run `yarn start` and navigate to `http://localhost:6006`!
-
-# API
-* [Components](./workspaces/amber-components/README.md)
 
 # Getting Started
-Install `amber-lib-js` using `yarn`:
+Install `amber-components` using `yarn`:
 ```
-yarn add git+ssh://git@github.com/AmberEngine/amber-lib-js.git
+yarn add @amber-engine/amber-components
 ```
 
 There's some additional `webpack` configuration necessary noted in the [Webpack Configuration](https://github.com/AmberEngine/amber-lib-js#webpack-configuration) section.
 
 Need a `Button` component that adheres to our brand standard?
 ```
-import { components } from 'amber-lib-js';
+import { components } from '@amber-engine/amber-components';
 const { Button } = components;
 ```
 Sweet!
@@ -59,3 +54,45 @@ Rather than including a specific path to resolve content included in `amber-lib-
 ```
 
 To see how things are being used in a real project, check out the Apollo project!
+
+## Components
+
+### Button
+A standard, styled button.
+
+**Properties**
+
+| name  | type | notes |
+|---|---|---|
+|`onClick` | function |For loading styles referenced in shared components |
+|`type` | string | For loading styles referenced in shared components.  Can be `['login', 'export', 'import', 'importNew', 'logout']` |
+|`className` | string **optional** | The class to apply to the button element. |
+
+Example:
+```
+<Button
+  onClick={this.executeThing}
+  type="import"
+  className={stylesheet.extraBigText}
+>
+  Import!
+</Button>
+```
+
+### Dropdown
+
+### Form
+
+### Icon
+
+### IconButton
+
+### Modal
+
+### Pagination
+
+### RoundRectangle
+
+### SquareSelect
+
+### Table

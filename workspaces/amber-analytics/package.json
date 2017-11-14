@@ -1,5 +1,5 @@
 {
-  "name": "@amber-engine/amber-lib",
+  "name": "@amber-engine/amber-analytics",
   "version": "1.0.0",
   "description": "",
   "author": "Amber Engine",
@@ -13,6 +13,7 @@
     "umd"
   ],
   "scripts": {
+    "storybook": "start-storybook -p 6006",
     "clean": "nwb clean-module",
     "build": "nwb build-react-component --copy-files",
     "test": "ava"
@@ -21,14 +22,14 @@
     "react": "15.x"
   },
   "dependencies": {
-    "@amber-engine/amber-analytics": "1.0.0",
-    "@amber-engine/amber-components": "1.0.0",
-    "@amber-engine/amber-content": "1.0.0",
-    "unformed": "1.0.0"
+    "recompose": "^0.26.0"
   },
   "devDependencies": {
-    "nwb": "^0.19.1",
-    "ava": "^0.22.0"
+    "@storybook/addon-actions": "^3.2.12",
+    "@storybook/addon-links": "^3.2.12",
+    "@storybook/react": "^3.2.12",
+    "ava": "^0.22.0",
+    "nwb": "^0.19.1"
   },
   "repository": {
     "type": "git",
@@ -58,7 +59,11 @@
       "../../config/testHelpers.js"
     ],
     "babel": {
-      "presets": ["env", "react", "stage-0"]
+      "presets": [
+        "env",
+        "react",
+        "stage-0"
+      ]
     }
   }
 }
