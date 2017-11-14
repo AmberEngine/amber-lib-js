@@ -1,5 +1,6 @@
 {
-  "name": "amber-generator",
+  "name": "@amber-engine/amber-generator",
+  "private": true,
   "version": "1.0.0",
   "description": "Generate your libs!",
   "main": "index.js",
