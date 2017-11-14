@@ -6501,7 +6501,7 @@ modify-values@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/modify-values/-/modify-values-1.0.0.tgz#e2b6cdeb9ce19f99317a53722f3dbf5df5eaaab2"
 
-moment@^2.19.1, moment@^2.6.0:
+moment@^2.6.0:
   version "2.19.1"
   resolved "https://registry.yarnpkg.com/moment/-/moment-2.19.1.tgz#56da1a2d1cbf01d38b7e1afc31c10bcfa1929167"
 
@@ -7909,9 +7909,9 @@ range-parser@^1.0.3, range-parser@^1.2.0, range-parser@~1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/range-parser/-/range-parser-1.2.0.tgz#f49be6b487894ddc40dcc94a322f611092e00d5e"
 
-raven-js@^3.19.1:
-  version "3.19.1"
-  resolved "https://registry.yarnpkg.com/raven-js/-/raven-js-3.19.1.tgz#a5d25646556fc2c86d2b188ae4f425c144c08dd8"
+raven-js@^3.20.0:
+  version "3.20.0"
+  resolved "https://registry.yarnpkg.com/raven-js/-/raven-js-3.20.0.tgz#b6f92f3db7f168ac32cd466fd5743f40fff4cffe"
 
 raw-body@2.3.2:
   version "2.3.2"
@@ -8075,7 +8075,7 @@ react-modal@^2.4.1:
     exenv "^1.2.0"
     prop-types "^15.5.10"
 
-react-modal@^3.0.0, react-modal@^3.1.2:
+react-modal@^3.1.2:
   version "3.1.2"
   resolved "https://registry.yarnpkg.com/react-modal/-/react-modal-3.1.2.tgz#6e1fd656315d6fc62a1edda2b5aecc9752ac6bca"
   dependencies:
@@ -8620,7 +8620,7 @@ right-align@^0.1.1:
   dependencies:
     align-text "^0.1.1"
 
-rimraf@2, rimraf@^2.2.8, rimraf@^2.5.1, rimraf@^2.6.0, rimraf@^2.6.1, rimraf@^2.6.2:
+rimraf@2, rimraf@^2.2.8, rimraf@^2.5.1, rimraf@^2.6.0, rimraf@^2.6.1:
   version "2.6.2"
   resolved "https://registry.yarnpkg.com/rimraf/-/rimraf-2.6.2.tgz#2ed8150d24a16ea8651e6d6ef0f47c4158ce7a36"
   dependencies:
