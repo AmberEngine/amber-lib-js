@@ -1,7 +1,7 @@
 import React from 'react';
 import Modal from 'react-modal';
 import classNames from 'classnames';
-import { Icon } from 'amber-content';
+import { Icon } from '@amber-engine/amber-content';
 
 import ModalLoading from './ModalLoading';
 

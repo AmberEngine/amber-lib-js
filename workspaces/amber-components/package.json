@@ -29,7 +29,8 @@
     "react-modal": "^3.1.2",
     "react-select": "^1.0.0-rc.10",
     "recompose": "^0.26.0",
-    "unformed": "1.0.0"
+    "unformed": "1.0.0",
+    "unformed-fields": "1.0.0"
   },
   "devDependencies": {
     "@storybook/addon-actions": "^3.2.12",

@@ -1,5 +1,5 @@
 import React from 'react';
-import loadingGif from 'amber-content/lib/img/AmberCirclesAnimated.gif';
+import loadingGif from '@amber-engine/amber-content/lib/img/AmberCirclesAnimated.gif';
 
 import stylesheet from './LoadingTable.scss';
 
