@@ -1,8 +1,8 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 
-import { Form, FormGroup, Fields, Submit, Validation } from '../../src/components/Form';
-import { FormBoxField } from '../../src/components/FormBox'
+import { Form, FormGroup, Fields, Submit, Validation } from 'unformed';
+import { FormBoxField } from '../src/components/FormBox'
 const { required, equalTo } = Validation;
 
 const onFormSubmit = data => console.log('submitted!', data);
