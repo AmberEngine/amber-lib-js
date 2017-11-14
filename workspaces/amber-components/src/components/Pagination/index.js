@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import classNames from 'classnames';
-import { Icon } from 'amber-content';
+import { Icon } from '@amber-engine/amber-content';
 
 import stylesheet from './Pagination.scss';
 

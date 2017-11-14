@@ -1,5 +1,5 @@
 import React from 'react';
-import loadingGif from 'amber-content/lib/img/Spinner.gif';
+import loadingGif from '@amber-engine/amber-content/lib/img/Spinner.gif';
 
 export default function ModalLoading() {
   return (

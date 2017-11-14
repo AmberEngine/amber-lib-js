@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 
-import Dropdown from '../src/components/Dropdown';
+import { Dropdown } from '../src/components';
 
 const dropdownOptions = [
   { value: 'AL', label: 'Alabama' },

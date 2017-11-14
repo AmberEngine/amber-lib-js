@@ -1,8 +1,9 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 
-import { Form, FormGroup, Fields, Submit, Validation } from 'unformed';
-import { FormBoxField } from '../src/components/FormBox'
+import { Form, FormGroup, Fields, Validation } from 'unformed';
+import { ValidatedDropDownField } from 'unformed-fields';
+import { FormSubmit, FormBox } from '../src/components';
 const { required, equalTo } = Validation;
 
 const onFormSubmit = data => console.log('submitted!', data);
@@ -29,26 +30,26 @@ storiesOf('Form', module)
           className="form-control"
           FieldComponent={Fields.ValidatedInputField}
         />
-        <Submit
+        <FormSubmit
           type="submit"
         >
           EXPORT
-        </Submit>
+        </FormSubmit>
       </Form>
     );
   })
   .add('renders formboxfield', () => {
     return (
       <Form onSubmit={onFormSubmit}>
-        <FormBoxField
+        <FormBox
           name="template"
           label="label"
         />
-        <Submit
+        <FormSubmit
           type="submit"
         >
           EXPORT
-        </Submit>
+        </FormSubmit>
       </Form>
     );
   })
@@ -59,14 +60,14 @@ storiesOf('Form', module)
           title="Template"
           name="template"
           className="form-control"
-          FieldComponent={Fields.ValidatedDropDownField}
+          FieldComponent={ValidatedDropDownField}
           options={dropdownOptions}
         />
-        <Submit
+        <FormSubmit
           type="submit"
         >
           EXPORT
-        </Submit>
+        </FormSubmit>
       </Form>
     );
   })
@@ -105,14 +106,14 @@ storiesOf('Form', module)
           title="Template"
           name="template"
           className="form-control"
-          FieldComponent={Fields.ValidatedDropDownField}
+          FieldComponent={ValidatedDropDownField}
           options={dropdownOptions}
         />
-        <Submit
+        <FormSubmit
           type="submit"
         >
           EXPORT
-        </Submit>
+        </FormSubmit>
       </Form>
     );
   });

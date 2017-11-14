@@ -70,3 +70,4 @@ class FormBox extends Component {
 }
 
 export const FormBoxField = Enhancers.enhanceWithFormHandlers(FormBox);
+export default FormBoxField;

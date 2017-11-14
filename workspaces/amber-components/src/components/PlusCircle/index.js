@@ -1,5 +1,5 @@
 import React from 'react';
-import Icon from './index';
+import { Icon } from '@amber-engine/amber-content';
 
 import CircleIconContainer from '../CircleIconContainer';
 

@@ -7,6 +7,7 @@ import './Dropdown.scss';
 
 export default (props) => {
   const { children, ...restProps } = props;
+
   return (
     <Select
       {...restProps}
