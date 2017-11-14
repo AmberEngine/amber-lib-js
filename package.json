@@ -52,7 +52,7 @@
     "new": "plop",
     "start": "start-storybook -p 6006",
     "clean": "lerna run clean",
-    "lib-build": "lerna run build",
+    "build": "lerna run build",
     "deploy-storybook": "storybook-to-ghpages",
     "test": "ava"
   },
