@@ -6,6 +6,9 @@
   "license": "MIT",
   "main": "lib/index.js",
   "module": "es/index.js",
+  "publishConfig": {
+    "access": "public"
+  },
   "files": [
     "css",
     "es",

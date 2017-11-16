@@ -7,6 +7,9 @@
   "main": "lib/index.js",
   "module": "es/index.js",
   "browser": "umd/index.js",
+  "publishConfig": {
+    "access": "public"
+  },
   "files": [
     "css",
     "es",
