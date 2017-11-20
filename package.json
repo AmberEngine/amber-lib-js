@@ -53,7 +53,7 @@
     "clean": "lerna run clean",
     "build": "lerna run build",
     "test": "lerna run test --stream",
-    "ship": "lerna publish --npm-tag=next",
+    "ship": "lerna publish",
     "deploy-storybook": "storybook-to-ghpages"
   },
   "repository": {
