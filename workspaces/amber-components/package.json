@@ -1,6 +1,6 @@
 {
   "name": "@amber-engine/amber-components",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "",
   "author": "Amber Engine",
   "license": "MIT",
@@ -32,8 +32,8 @@
     "react-modal": "^3.1.2",
     "react-select": "^1.0.0-rc.10",
     "recompose": "^0.26.0",
-    "unformed": "^1.0.6",
-    "unformed-fields": "^1.0.6"
+    "unformed": "^1.0.7",
+    "unformed-fields": "^1.0.7"
   },
   "devDependencies": {
     "@storybook/addon-actions": "^3.2.12",
