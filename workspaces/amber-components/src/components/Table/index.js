@@ -1,37 +1,20 @@
-import { RowDefinition } from 'griddle-react';
-import TableWrapper from './TableWrapper';
-import TableLayout from './TableLayout';
-import ListLayout from './ListLayout';
-import LocalTable from './LocalTable';
-import RemoteTable from './RemoteTable';
-import LoadingTable from './LoadingTable';
-import ActionColumn from './ActionColumn';
-import ActionColumnHeadingCell from './ActionColumnHeadingCell';
-import LinkColumn from './LinkColumn';
-import LinkRow from './LinkRow';
-import ExternalLinkColumn from './ExternalLinkColumn';
-import EmptyHeadingCell from './EmptyHeadingCell';
-import AllLabelHeadingCell from './AllLabelHeadingCell';
-import ColumnDefinition from './TableColumnDefinition';
-import DateColumn from './DateColumn';
-import * as Enhancers from './Enhancers';
+export { RowDefinition } from 'griddle-react';
+export TableWrapper from './TableWrapper';
+export TableLayout from './TableLayout';
+export ListLayout from './ListLayout';
+export LocalTable from './LocalTable';
+export RemoteTable from './RemoteTable';
+export LoadingTable from './LoadingTable';
+export ActionColumn from './ActionColumn';
+export ActionColumnHeadingCell from './ActionColumnHeadingCell';
+export LinkColumn from './LinkColumn';
+export LinkRow from './LinkRow';
+export ExternalLinkColumn from './ExternalLinkColumn';
+export EmptyHeadingCell from './EmptyHeadingCell';
+export AllLabelHeadingCell from './AllLabelHeadingCell';
+export ColumnDefinition from './TableColumnDefinition';
+export DateColumn from './DateColumn';
+export * as Enhancers from './Enhancers';
 
-export {
-  TableWrapper,
-  TableLayout,
-  ListLayout,
-  LocalTable,
-  RemoteTable,
-  LoadingTable,
-  RowDefinition,
-  ColumnDefinition,
-  ActionColumn,
-  ActionColumnHeadingCell,
-  LinkColumn,
-  LinkRow,
-  ExternalLinkColumn,
-  EmptyHeadingCell,
-  AllLabelHeadingCell,
-  DateColumn,
-  Enhancers,
-};
+import * as self from './index';
+export default self;

@@ -34,3 +34,5 @@ export const EnhanceWithFileInput = (OriginalComponent) =>
       );
     }
   };
+
+export default EnhanceWithFileInput;
