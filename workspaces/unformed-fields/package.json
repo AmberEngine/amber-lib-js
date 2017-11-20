@@ -1,6 +1,6 @@
 {
   "name": "unformed-fields",
-  "version": "1.0.3",
+  "version": "1.0.6",
   "description": "",
   "author": "Amber Engine",
   "license": "MIT",
@@ -20,7 +20,7 @@
   },
   "peerDependencies": {
     "react": "15.x",
-    "unformed": "^1.0.3"
+    "unformed": "^1.0.6"
   },
   "dependencies": {
     "react-input-mask": "^1.0.7",
@@ -32,7 +32,7 @@
     "@storybook/react": "^3.2.12",
     "ava": "^0.22.0",
     "nwb": "^0.19.1",
-    "unformed": "^1.0.3"
+    "unformed": "^1.0.6"
   },
   "repository": {
     "type": "git",
