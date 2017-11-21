@@ -9,6 +9,7 @@ import Brands from '../../icons/brands.svg';
 import Download from '../../icons/download.svg';
 import Freight from '../../icons/freight.svg';
 import LinkedIn from '../../icons/linkedin.svg';
+import Link from '../../icons/link.svg';
 import Preview from '../../icons/preview.svg';
 import Standard from '../../icons/standard.svg';
 import UpArrow from '../../icons/up-arrow.svg';
@@ -26,6 +27,7 @@ import NoImage from '../../icons/no-image.svg';
 import RightArrow from '../../icons/right-arrow.svg';
 import Sync from '../../icons/sync.svg';
 import WhiteGlove from '../../icons/whiteglove.svg';
+import WhatsThis from '../../icons/whats-this.svg';
 import CircleEmpty from '../../icons/circle-empty.svg';
 import Facebook from '../../icons/facebook.svg';
 import Group from '../../icons/group.svg';
@@ -86,6 +88,8 @@ const iconMap = {
   'omni-action': OmniAction,
   search: Search,
   twitter: Twitter,
+  'whats-this': WhatsThis,
+  link: Link,
 };
 
 export default iconMap;
