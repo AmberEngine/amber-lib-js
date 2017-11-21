@@ -4,7 +4,7 @@ import {
 } from '@amber-engine/amber-components';
 import Form from 'unformed';
 import FormFields from 'unformed-fields';
-import { Icon } from '@amber-engine/amber-content';
+import { Icon, resources as ContentResources } from '@amber-engine/amber-content';
 
 const {
   FormSuccessSection,
@@ -33,6 +33,10 @@ export const components = {
 export const utils = {
   ...FormUtils,
   ...SharedUtils,
+};
+
+export const resources = {
+  ...ContentResources,
 };
 
 import * as self from './index';
