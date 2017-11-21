@@ -1,6 +1,6 @@
 {
   "name": "@amber-engine/amber-lib",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "",
   "author": "Amber Engine",
   "license": "MIT",
@@ -24,11 +24,11 @@
     "react": "15.x"
   },
   "dependencies": {
-    "@amber-engine/amber-analytics": "^1.2.0",
-    "@amber-engine/amber-components": "^1.4.0",
-    "@amber-engine/amber-content": "^1.4.0",
-    "unformed": "^1.4.0",
-    "unformed-fields": "^1.4.0"
+    "@amber-engine/amber-analytics": "^1.4.1",
+    "@amber-engine/amber-components": "^1.4.1",
+    "@amber-engine/amber-content": "^1.4.1",
+    "unformed": "^1.4.1",
+    "unformed-fields": "^1.4.1"
   },
   "devDependencies": {
     "nwb": "^0.19.1"
