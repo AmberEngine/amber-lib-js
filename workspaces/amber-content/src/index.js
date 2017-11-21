@@ -1,5 +1,5 @@
 export Icon from './components/Icon';
-export variables from './resources/variables';
+export resources from './resources';
 
 import * as self from './index';
 export default self;
