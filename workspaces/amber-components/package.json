@@ -1,6 +1,6 @@
 {
   "name": "@amber-engine/amber-components",
-  "version": "1.2.3",
+  "version": "1.3.0",
   "description": "",
   "author": "Amber Engine",
   "license": "MIT",
@@ -25,7 +25,7 @@
     "react": "15.x"
   },
   "dependencies": {
-    "@amber-engine/amber-content": "^1.2.3",
+    "@amber-engine/amber-content": "^1.3.0",
     "classnames": "^2.2.5",
     "griddle-react": "^1.9.0",
     "lodash": "^4.17.4",
