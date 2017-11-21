@@ -8,7 +8,8 @@ import {
   zip,
   email,
   phoneNumber,
-  regex
+  price,
+  regex,
 } from '../validation';
 
 test('equalTo returns null when values are equal', t => {
@@ -105,4 +106,24 @@ test('regex returns error when value doesn\'t match regex', t => {
   const validationFunction = regex(ezRegex, customErrorMessage);
   const validationResult = validationFunction('hard');
   t.is(validationResult, customErrorMessage);
+});
+
+test('price returns null when value is in a price format with decimals', t => {
+  const validationResult = price('154.00');
+  t.is(validationResult, null);
+});
+
+test('price returns null when value is in a price format with no decimals', t => {
+  const validationResult = price('154.00');
+  t.is(validationResult, null);
+});
+
+test('price returns error when value isn\'t a valid price', t => {
+  const validationResult = price('nope!');
+  t.is(validationResult, 'Please enter a valid price');
+});
+
+test('price returns error when value has one decimal', t => {
+  const validationResult = price('154.6');
+  t.is(validationResult, 'Please enter a valid price');
 });

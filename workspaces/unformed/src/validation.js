@@ -2,6 +2,7 @@ const passwordHasNumberRegex = /[0-9]/g;
 const phoneNumberRegex = /(\d{3})-(\d{3})-(\d{4})/g;
 const emailRegex = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/g;
 const postalCodeRegex = /(^\d{5}$)|(^\d{5}-\d{4}$)/;
+const priceRegex = /^(\d+)(\.(\d{2}))?$/g;
 
 export const regex = (reg, message) => (value) => {
   // If we don't have a value, don't validate.
@@ -16,6 +17,7 @@ export const regex = (reg, message) => (value) => {
 export const phoneNumber = regex(phoneNumberRegex, 'Please enter a valid phone number');
 export const email = regex(emailRegex, 'Please enter a valid email address');
 export const zip = regex(postalCodeRegex, 'Please enter a valid zip code');
+export const price = regex(priceRegex, 'Please enter a valid price');
 export const passwordHasNumber = regex(
   passwordHasNumberRegex,
   'Please include at least one number',
