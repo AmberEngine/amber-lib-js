@@ -3,8 +3,8 @@ import { storiesOf } from '@storybook/react';
 
 import { Form, FormGroup, Fields, Validation } from 'unformed';
 import { ValidatedDropDownField } from 'unformed-fields';
-import { FormSubmit, FormBox } from '../src/components';
-const { required, equalTo } = Validation;
+import { FormSubmit, FormBox, Button } from '../src/components';
+const { required, equalTo, price } = Validation;
 
 const onFormSubmit = data => console.log('submitted!', data);
 
@@ -68,6 +68,32 @@ storiesOf('Form', module)
         >
           EXPORT
         </FormSubmit>
+      </Form>
+    );
+  })
+  .add('renders validated input with clear', () => {
+    let form = null;
+    const clearForm = (e) => {
+      e.preventDefault();
+      form.clear();
+    }
+    return (
+      <Form onSubmit={onFormSubmit} ref={e => form = e}>
+        <FormGroup
+          title="Template"
+          name="template"
+          className="form-control"
+          FieldComponent={Fields.ValidatedInputField}
+          validate={[required, price]}
+        />
+        <FormSubmit
+          type="submit"
+        >
+          EXPORT
+        </FormSubmit>
+        <Button onClick={clearForm}>
+          Clear
+        </Button>
       </Form>
     );
   })

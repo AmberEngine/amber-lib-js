@@ -107,6 +107,10 @@ export default class Form extends PureComponent {
     if (e) {
       e.preventDefault();
     }
+    // Set the submitted state before any other handlers are run.
+    this.setState({
+      submitted: true,
+    });
 
     const { onSubmit, onValidationError } = this.props;
     const { formData } = this.state;
@@ -118,10 +122,6 @@ export default class Form extends PureComponent {
     } else if (onValidationError) {
       onValidationError(validationErrors);
     }
-
-    this.setState({
-      submitted: true,
-    });
   }
 
   render() {
