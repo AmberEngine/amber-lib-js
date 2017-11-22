@@ -27,7 +27,7 @@ const getValueForEvent = (e) => {
   return !!e && e.target ? e.target.value : e;
 };
 
-const coreFieldHandlers = compose(
+const coreFieldHandlers = keysToUpdateFor => compose(
   submitEnhancer,
   getContext({
     getFormData: PropTypes.func,
@@ -37,7 +37,7 @@ const coreFieldHandlers = compose(
     const formData = getFormData();
     return formData[name] || '';
   }),
-  onlyUpdateForKeys(['value']),
+  onlyUpdateForKeys(keysToUpdateFor),
   withHandlers({
     onBlur: ({ name, value, setFormValue }) => () => {
       setFormValue(name, value);
@@ -97,16 +97,16 @@ const updateValidation = (value, { getFormData, setValidationErrors, validate = 
 };
 
 export const enhanceWithFormHandlers = compose(
-  coreFieldHandlers,
+  coreFieldHandlers(['value']),
   registerField,
   omitCoreFieldProperties,
 );
 
 export const enhanceWithValidation = compose(
-  coreFieldHandlers,
   getContext({
     submitted: PropTypes.bool,
   }),
+  coreFieldHandlers(['value', 'submitted']),
   withState('validationErrors', 'setValidationErrors', ({ value, validate = [] }) => {
     return getValidationErrors(value, validate);
   }),
