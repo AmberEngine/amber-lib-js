@@ -38,6 +38,34 @@ storiesOf('Form', module)
       </Form>
     );
   })
+  .add('renders disabled input', () => {
+    let disabled = false;
+    const toggleDisabled = () => {
+      console.log('disabled!', disabled);
+      disabled = !disabled;
+    };
+
+    return (
+      <div>
+        <Form onSubmit={onFormSubmit} disabled={disabled}>
+          <FormGroup
+            title="Template"
+            name="template"
+            className="form-control"
+            FieldComponent={Fields.ValidatedInputField}
+          />
+          <FormSubmit
+            type="submit"
+          >
+            EXPORT
+          </FormSubmit>
+        </Form>
+        <Button onClick={toggleDisabled}>
+          Toggle Disabled
+        </Button>
+      </div>
+    );
+  })
   .add('renders formboxfield', () => {
     return (
       <Form onSubmit={onFormSubmit}>

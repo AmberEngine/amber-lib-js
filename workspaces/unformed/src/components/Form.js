@@ -12,6 +12,7 @@ export default class Form extends PureComponent {
     registerField: PropTypes.func.isRequired,
     submit: PropTypes.func.isRequired,
     submitted: PropTypes.bool.isRequired,
+    disabled: PropTypes.bool.isRequired,
   }
 
   constructor(props, context) {
@@ -25,12 +26,14 @@ export default class Form extends PureComponent {
   }
 
   getChildContext() {
+    console.log('something changed!');
     return {
       getFormData: this.getFormData,
       setFormValue: this.setFormValue,
       registerField: this.registerField,
       submit: this.onSubmit,
       submitted: this.state.submitted,
+      disabled: this.props.disabled || false,
     };
   }
 

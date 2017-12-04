@@ -32,6 +32,7 @@ const coreFieldHandlers = keysToUpdateFor => compose(
   getContext({
     getFormData: PropTypes.func,
     setFormValue: PropTypes.func,
+    disabled: PropTypes.bool,
   }),
   withState('value', 'setValue', ({ name, getFormData }) => {
     const formData = getFormData();
@@ -97,7 +98,7 @@ const updateValidation = (value, { getFormData, setValidationErrors, validate = 
 };
 
 export const enhanceWithFormHandlers = compose(
-  coreFieldHandlers(['value']),
+  coreFieldHandlers(['value', 'disabled']),
   registerField,
   omitCoreFieldProperties,
 );
@@ -106,7 +107,7 @@ export const enhanceWithValidation = compose(
   getContext({
     submitted: PropTypes.bool,
   }),
-  coreFieldHandlers(['value', 'submitted']),
+  coreFieldHandlers(['value', 'disabled', 'submitted']),
   withState('validationErrors', 'setValidationErrors', ({ value, validate = [] }) => {
     return getValidationErrors(value, validate);
   }),
