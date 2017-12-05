@@ -39,31 +39,41 @@ storiesOf('Form', module)
     );
   })
   .add('renders disabled input', () => {
-    let disabled = false;
-    const toggleDisabled = () => {
-      console.log('disabled!', disabled);
-      disabled = !disabled;
-    };
+    class FormWrapper extends React.Component {
+      state = {
+        disabled: false,
+      }
+
+      toggleDisabled = () => {
+        this.setState(state => ({ disabled: !state.disabled }));
+      };
+
+      render() {
+        return (
+          <div>
+            <Form onSubmit={onFormSubmit} disabled={this.state.disabled}>
+              <FormGroup
+                title="Template"
+                name="template"
+                className="form-control"
+                FieldComponent={Fields.ValidatedInputField}
+              />
+              <FormSubmit
+                type="submit"
+              >
+                EXPORT
+              </FormSubmit>
+            </Form>
+            <Button onClick={this.toggleDisabled}>
+              Toggle Disabled
+            </Button>
+          </div>
+        );
+      }
+    }
 
     return (
-      <div>
-        <Form onSubmit={onFormSubmit} disabled={disabled}>
-          <FormGroup
-            title="Template"
-            name="template"
-            className="form-control"
-            FieldComponent={Fields.ValidatedInputField}
-          />
-          <FormSubmit
-            type="submit"
-          >
-            EXPORT
-          </FormSubmit>
-        </Form>
-        <Button onClick={toggleDisabled}>
-          Toggle Disabled
-        </Button>
-      </div>
+      <FormWrapper />
     );
   })
   .add('renders formboxfield', () => {
