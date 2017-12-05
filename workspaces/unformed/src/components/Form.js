@@ -26,7 +26,6 @@ export default class Form extends PureComponent {
   }
 
   getChildContext() {
-    console.log('something changed!');
     return {
       getFormData: this.getFormData,
       setFormValue: this.setFormValue,
