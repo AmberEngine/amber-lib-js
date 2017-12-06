@@ -5,6 +5,7 @@ import {
 import Form from 'unformed';
 import FormFields from 'unformed-fields';
 import { Icon, resources as ContentResources } from '@amber-engine/amber-content';
+import { components as AnalyticsComponents, analytics } from '@amber-engine/amber-analytics';
 
 const {
   FormSuccessSection,
@@ -28,11 +29,13 @@ export const components = {
       ...FormFields,
     },
   },
+  AnalyticsComponents,
 };
 
 export const utils = {
   ...FormUtils,
   ...SharedUtils,
+  analytics,
 };
 
 export const resources = {
