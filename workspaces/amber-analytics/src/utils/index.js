@@ -1,13 +1,7 @@
-import GoogleAnalytics from './googleAnalyticsSource';
-import SentryAnalytics from './sentryAnalyticsSource';
+export GoogleAnalytics from './googleAnalyticsSource';
+export SentryAnalytics from './sentryAnalyticsSource';
 
-// Export the analytic sources
-export {
-  GoogleAnalytics,
-  SentryAnalytics,
-};
-
-export default class AnalyticsProvider {
+export class AnalyticsProvider {
   analyticSources: []
 
   constructor(sources = []) {
