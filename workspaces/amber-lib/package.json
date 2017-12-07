@@ -1,6 +1,6 @@
 {
   "name": "@amber-engine/amber-lib",
-  "version": "1.6.0",
+  "version": "1.6.1",
   "description": "",
   "author": "Amber Engine",
   "license": "MIT",
@@ -24,7 +24,7 @@
     "react": "15.x"
   },
   "dependencies": {
-    "@amber-engine/amber-analytics": "^1.6.0",
+    "@amber-engine/amber-analytics": "^1.6.1",
     "@amber-engine/amber-components": "^1.5.0",
     "@amber-engine/amber-content": "^1.4.1",
     "unformed": "^1.5.0",
