@@ -52,7 +52,7 @@ const coreFieldHandlers = keysToUpdateFor => compose(
       if (e.key === 'Enter') {
         e.preventDefault();
         setFormValue(name, value).then(() => {
-          submit();
+          submit(e);
         });
       }
     },
