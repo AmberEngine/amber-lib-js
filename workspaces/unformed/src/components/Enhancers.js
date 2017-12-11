@@ -50,6 +50,7 @@ const coreFieldHandlers = keysToUpdateFor => compose(
     },
     onKeyPress: ({ submit, setFormValue, name, value }) => (e) => {
       if (e.key === 'Enter') {
+        e.persist();
         e.preventDefault();
         setFormValue(name, value).then(() => {
           submit(e);
