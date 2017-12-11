@@ -1,6 +1,6 @@
 {
   "name": "@amber-engine/amber-lib",
-  "version": "1.6.2",
+  "version": "1.6.3",
   "description": "",
   "author": "Amber Engine",
   "license": "MIT",
@@ -25,10 +25,10 @@
   },
   "dependencies": {
     "@amber-engine/amber-analytics": "^1.6.1",
-    "@amber-engine/amber-components": "^1.6.2",
+    "@amber-engine/amber-components": "^1.6.3",
     "@amber-engine/amber-content": "^1.4.1",
-    "unformed": "^1.6.2",
-    "unformed-fields": "^1.6.2"
+    "unformed": "^1.6.3",
+    "unformed-fields": "^1.6.3"
   },
   "devDependencies": {
     "nwb": "^0.19.1"
