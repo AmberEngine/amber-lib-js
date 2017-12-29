@@ -1,0 +1,16 @@
+notifications:
+  email: false
+
+python:
+  - '3.5'
+
+node_js:
+  - 6
+
+install:
+  - yarn install
+
+before_script:
+  - yarn start -- --silent &
+script:
+  - yarn cypress:run

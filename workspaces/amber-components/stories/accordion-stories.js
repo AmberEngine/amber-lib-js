@@ -1,5 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
+import { withInfo } from '@storybook/addon-info';
 
 import './stories.scss';
 
@@ -7,7 +8,7 @@ import { AccordionContainer, AccordionItem } from '../src/components/Accordion';
 
 
 storiesOf('Accordion', module)
-  .add('renders accordion', () => {
+  .add('renders accordion', withInfo()(() => {
     class Blah extends React.Component {
       state = {
         time: 0,
@@ -46,4 +47,4 @@ storiesOf('Accordion', module)
         </AccordionContainer>
       </div>
     );
-  });
+  }));
