@@ -1,0 +1,22 @@
+@import "~shared/styles/variables";
+
+.form {
+  margin: 1rem;
+}
+
+.group {
+  margin-bottom: 1rem;
+}
+
+.comments {
+  width: 100%;
+  min-height: 150px;
+  max-height: 500px;
+  margin-top: 1px;
+  resize: vertical;
+}
+
+.warning {
+  color: $coral;
+  text-align: center;
+}

@@ -1,0 +1,26 @@
+@import "~shared/styles/variables";
+
+.section {
+  margin-top: 20px;
+}
+
+a.cancelLink {
+  color: $tangerine;
+  cursor: pointer;
+
+  &:hover,
+  &:active {
+    color: $orange;
+  }
+}
+
+.comments {
+  width: 100%;
+  min-height: 150px;
+  max-height: 500px;
+  resize: vertical;
+}
+
+.noWrap {
+  white-space: nowrap;
+}

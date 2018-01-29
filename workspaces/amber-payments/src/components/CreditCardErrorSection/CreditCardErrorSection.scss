@@ -1,0 +1,8 @@
+@import "~shared/styles/normalize";
+
+.errorContainer {
+  background-color: white;
+  padding: 1rem 3rem;
+  color: $tangerine;
+  border-bottom: 2px solid $lightGray;
+}
