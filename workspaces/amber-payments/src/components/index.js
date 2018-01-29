@@ -1,11 +1,4 @@
-import React, { Component } from 'react';
+export CreditCardForm from './CreditCardForm';
 
-export default class extends Component {
-  render() {
-    return (
-      <div>
-        <h2>New Component!</h2>
-      </div>
-    );
-  }
-}
+import * as self from './index';
+export default self;

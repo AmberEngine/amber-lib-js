@@ -25,14 +25,19 @@
     "react": "15.x"
   },
   "dependencies": {
-    "@amber-engine/amber-components": "^1.6.4"
+    "@amber-engine/amber-components": "^1.6.4",
+    "@amber-engine/amber-content": "^1.4.1",
+    "classnames": "^2.2.5",
+    "lodash": "^4.17.4",
+    "unformed": "^1.6.4",
+    "unformed-fields": "^1.6.4"
   },
   "devDependencies": {
     "@storybook/addon-actions": "^3.2.12",
     "@storybook/addon-links": "^3.2.12",
     "@storybook/react": "^3.2.12",
-    "nwb": "^0.19.1",
-    "ava": "^0.22.0"
+    "ava": "^0.22.0",
+    "nwb": "^0.19.1"
   },
   "repository": {
     "type": "git",
@@ -62,7 +67,11 @@
       "../../config/testHelpers.js"
     ],
     "babel": {
-      "presets": ["env", "react", "stage-0"]
+      "presets": [
+        "env",
+        "react",
+        "stage-0"
+      ]
     }
   }
 }

@@ -3,7 +3,7 @@ import React, { Component, PropTypes } from 'react';
 import UpdatePlanForm from '../UpdatePlanForm';
 import stylesheet from './UpdatePlanSection.scss';
 
-import { components } from '@amber-engine/amber-lib';
+import { components } from '@amber-engine/amber-components';
 const { Modal } = components;
 
 // TODO: import toast from 'shared/toast/services';
