@@ -27,7 +27,9 @@
   "dependencies": {
     "@amber-engine/amber-components": "^1.6.4",
     "@amber-engine/amber-content": "^1.4.1",
+    "card-validator": "^4.2.0",
     "classnames": "^2.2.5",
+    "credit-card-type": "^6.1.1",
     "lodash": "^4.17.4",
     "unformed": "^1.6.4",
     "unformed-fields": "^1.6.4"

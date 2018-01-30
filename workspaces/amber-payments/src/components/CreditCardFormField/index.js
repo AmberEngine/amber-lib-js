@@ -1,27 +1,26 @@
 import React, { Component } from 'react';
-import { Field } from 'redux-form';
 import classNames from 'classnames';
+import { MaskInput } from 'unformed-fields';
+import { Fields, Enhancers } from 'unformed';
+const { ValidatedField } = Fields;
+const { enhanceWithValidation } = Enhancers;
 
 import CreditCardIcon from '../CreditCardIcon';
-import { formatCardNumberString, getCardInfo } from '../../utils';
+// import { formatCardNumberString, getCardInfo } from '../../utils';
+
+const defaultCreditCardMask = '9999-9999-9999-9999';
 
 import stylesheet from './CreditCardFormField.scss';
 
-import ValidatedFormField from '../../../components/FormFields/ValidatedFormField';
-
-export default class CreditCardFormField extends Component {
+class CreditCardFormField extends Component {
   static defaultProps = {
     validate: [],
-    initialCardType: null
+    initialCardType: null,
   }
 
-  constructor(props, context) {
-    super(props, context);
-    const { initialCardType } = props;
-
-    this.state = {
-      cardType: initialCardType
-    };
+  state = {
+    initialCardType: this.props.initialCardType,
+    creditCardMask: defaultCreditCardMask,
   }
 
   componentWillReceiveProps(newProps) {
@@ -31,58 +30,43 @@ export default class CreditCardFormField extends Component {
 
     if (oldInitialCardType !== initialCardType && initialCardType !== cardType) {
       this.setState({
-        cardType: initialCardType
+        cardType: initialCardType,
       });
     }
   }
 
-  normalizeCreditCard = (value) => {
-    const formattedNumberString = formatCardNumberString(value);
-    const { number, cardType } = getCardInfo(formattedNumberString);
-
-    // Update the card type during normalization
-    this.setState({ cardType });
-
-    return number;
-  }
-
   render() {
-    const { validate } = this.props;
-    const { cardType } = this.state;
+    const { ...restProps } = this.props;
+    const { cardType, creditCardMask } = this.state;
 
     return (
       <div>
-        <div className={classNames('col-xs-7', stylesheet.creditInput)} >
-          <Field
-            name='creditCardNumber'
-            type='text'
-            component={ValidatedFormField}
-            normalize={this.normalizeCreditCard}
-            validate={validate}
-            clearOnFirstClick='true'
-            ref={node => { this.field = node; }}
+        <div className={stylesheet.creditInput}>
+          <MaskInput
+            {...restProps}
+            mask={creditCardMask}
           />
         </div>
-        <div className='col-xs-5'>
+        <div className={stylesheet.creditIcon}>
           <span className={stylesheet.iconGroup}>
             <CreditCardIcon
-              cardType='visa'
-              cardName='Visa'
+              cardType="visa"
+              cardName="Visa"
               selectedCardType={cardType}
             />
             <CreditCardIcon
-              cardType='master-card'
-              cardName='Master Card'
+              cardType="master-card"
+              cardName="Master Card"
               selectedCardType={cardType}
             />
             <CreditCardIcon
-              cardType='discover'
-              cardName='Discover'
+              cardType="discover"
+              cardName="Discover"
               selectedCardType={cardType}
             />
             <CreditCardIcon
-              cardType='american-express'
-              cardName='American Express'
+              cardType="american-express"
+              cardName="American Express"
               selectedCardType={cardType}
             />
           </span>
@@ -91,3 +75,5 @@ export default class CreditCardFormField extends Component {
     );
   }
 }
+
+export default enhanceWithValidation(ValidatedField(CreditCardFormField));

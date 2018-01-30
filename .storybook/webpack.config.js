@@ -28,6 +28,7 @@ module.exports = {
         test: /\.(gif|jpg|png|svg|gif|ico|svg)$/,
         include: [
           /img/,
+          /CreditCardIcon/
         ],
         exclude: [
           /icons/,

@@ -9,7 +9,7 @@ const { FormSubmit } = components;
 const { Form, FormGroup, Fields, Validation } = unformed;
 const { required, zip } = Validation;
 
-// import CreditCardFormField from '../CreditCardFormField';
+import CreditCardFormField from '../CreditCardFormField';
 import stylesheet from './CreditCardForm.scss';
 
 // // import { SelectFormField, ValidatedFormField } from '../../../components/FormFields';
@@ -131,7 +131,7 @@ export default class CreditCardForm extends Component {
           title="Card Number"
           name="card_number"
           className={stylesheet.tallInput}
-          FieldComponent={Fields.ValidatedInputField}
+          FieldComponent={CreditCardFormField}
           validate={[required]}
         />
         <div className={stylesheet.inlineFormGroup}>

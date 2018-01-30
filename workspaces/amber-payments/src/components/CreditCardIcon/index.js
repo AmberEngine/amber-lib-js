@@ -41,12 +41,12 @@ const CreditCardIcon = (props) => {
 
 
 CreditCardIcon.defaultProps = {
-  selectedCardType: null
+  selectedCardType: null,
 };
 
 CreditCardIcon.propTypes = {
   selectedCardType: PropTypes.oneOf(cardTypes),
-  cardName: PropTypes.string
+  cardName: PropTypes.string,
 };
 
 export default CreditCardIcon;
