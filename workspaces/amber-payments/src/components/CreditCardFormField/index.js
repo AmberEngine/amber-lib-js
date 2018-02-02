@@ -14,7 +14,6 @@ import stylesheet from './CreditCardFormField.scss';
 
 class CreditCardFormField extends Component {
   static defaultProps = {
-    validate: [],
     initialCardType: null,
   }
 
